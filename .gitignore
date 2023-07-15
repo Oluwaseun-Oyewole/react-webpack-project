@@ -1,0 +1,6 @@
+node_modules
+dist
+
+
+# install the following dependencies as dev dependencies webpack webpack cli webpack-dev-server, babel-loader
+# babel-loader @babel/core @babel/preset-env
