@@ -1,16 +1,5 @@
+import { render } from "react-dom";
+import App from "./components/App";
 import "./styles/index.scss";
 
-const elp = {
-  fod: "2",
-  loo: 10,
-};
-
-console.log("elp:", elp);
-
-const updatedElp = {
-  ...elp,
-  newElp: 202,
-  fod: 60,
-};
-
-console.log("elp", updatedElp);
+render(<App />, document.getElementById("root"));

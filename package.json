@@ -4,16 +4,22 @@
     "start": "webpack serve --open",
     "watch": "webpack --watch",
     "build": "webpack --env NODE_ENV=production",
-    "build-dev": "webpack"
+    "build-dev": "webpack",
+    "clean": "rmdir -i dist"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "postcss": "^8.4.26",
     "postcss-preset-env": "^9.0.0",
+    "react-refresh": "^0.14.0",
     "sass": "^1.63.6",
     "sass-loader": "^13.3.2",
     "webpack": "^5.88.1",
@@ -21,6 +27,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "postcss-loader": "^7.3.3"
+    "postcss-loader": "^7.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

@@ -1,6 +1,11 @@
 @use "variables";
 body {
-  background: lightgrey;
   color: variables.$bg-primary;
   font-size: 10px;
+  background: rgba(19, 15, 15, 0.7);
+  // background-image: url("../assets/alert.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
 }

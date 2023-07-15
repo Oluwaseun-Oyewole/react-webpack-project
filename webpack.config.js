@@ -1,7 +1,10 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-mode = "development";
+const mode = "development";
 
 if (process.env.NODE_ENV === "production") {
   mode = "production";
@@ -32,7 +35,34 @@ module.exports = {
           "sass-loader",
         ],
       },
+
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
+        type: "asset/resource",
+      },
+
+      {
+        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        type: "asset/inline",
+      },
     ],
   },
-  plugins: [new MiniCssExtractPlugin()],
+
+  resolve: {
+    extensions: [".tsx", ".ts", ".js", ".jsx"],
+  },
+
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "images/[hash][ext][query]",
+  },
+
+  plugins: [
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin(),
+    new ReactRefreshWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+  ],
 };

@@ -4,3 +4,9 @@ dist
 
 # install the following dependencies as dev dependencies webpack webpack cli webpack-dev-server, babel-loader
 # babel-loader @babel/core @babel/preset-env
+# css-loader, mini-css-extract-plugin, sass, sass-loader, postcss, postcss-loader
+# react, react-dom
+
+# for images there is no extra installation needed...
+# install html-wepack-plugin
+#install clan webpack plugin 
