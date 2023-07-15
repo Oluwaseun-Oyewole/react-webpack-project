@@ -1,0 +1,6 @@
+@use "variables";
+body {
+  background: lightgrey;
+  color: variables.$bg-primary;
+  font-size: 10px;
+}

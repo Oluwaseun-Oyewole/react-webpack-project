@@ -1,3 +1,5 @@
+import "./styles/index.scss";
+
 const elp = {
   fod: "2",
   loo: 10,
